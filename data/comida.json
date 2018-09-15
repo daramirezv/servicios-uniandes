@@ -1,0 +1,38 @@
+[
+    {
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/1/14/Hamburguesa_%28Plato_combinado%29.jpg",
+        "nombre": "David Ramirez",
+        "producto": "Hamburguesa",
+        "descripcion": "Una hamburguesa muy buena para ti",
+        "sitio": "ML515",
+        "costo": "$15000",
+        "correo": "david@gmail.com"
+    },
+    {
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/1/14/Hamburguesa_%28Plato_combinado%29.jpg",
+        "nombre": "David Ramirez",
+        "producto": "Hamburguesa",
+        "descripcion": "Una hamburguesa muy buena para ti",
+        "sitio": "ML515",
+        "costo": "$15000",
+        "correo": "david@gmail.com"
+    },
+    {
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/1/14/Hamburguesa_%28Plato_combinado%29.jpg",
+        "nombre": "David Ramirez",
+        "producto": "Hamburguesa",
+        "descripcion": "Una hamburguesa muy buena para ti",
+        "sitio": "ML515",
+        "costo": "$15000",
+        "correo": "david@gmail.com"
+    },
+    {
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/1/14/Hamburguesa_%28Plato_combinado%29.jpg",
+        "nombre": "David Ramirez",
+        "producto": "Hamburguesa",
+        "descripcion": "Una hamburguesa muy buena para ti",
+        "sitio": "ML515",
+        "costo": "$15000",
+        "correo": "david@gmail.com"
+    }
+]

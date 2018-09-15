@@ -1,0 +1,38 @@
+[
+  {
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Taza_de_t%C3%A9.jpg",
+    "nombre": "David Ramirez",
+    "producto": "Taza",
+    "descripcion": "Una taza muy buena para ti",
+    "sitio": "ML515",
+    "costo": "$15000",
+    "correo": "david@gmail.com"
+  },
+  {
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Taza_de_t%C3%A9.jpg",
+    "nombre": "David Ramirez",
+    "producto": "Taza",
+    "descripcion": "Una taza muy buena para ti",
+    "sitio": "ML515",
+    "costo": "$15000",
+    "correo": "david@gmail.com"
+  },
+  {
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Taza_de_t%C3%A9.jpg",
+    "nombre": "David Ramirez",
+    "producto": "Taza",
+    "descripcion": "Una taza muy buena para ti",
+    "sitio": "ML515",
+    "costo": "$15000",
+    "correo": "david@gmail.com"
+  },
+  {
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Taza_de_t%C3%A9.jpg",
+    "nombre": "David Ramirez",
+    "producto": "Taza",
+    "descripcion": "Una taza muy buena para ti",
+    "sitio": "ML515",
+    "costo": "$15000",
+    "correo": "david@gmail.com"
+  }
+]
