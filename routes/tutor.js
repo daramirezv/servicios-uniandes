@@ -136,6 +136,10 @@ router.post('/postApunte', function(req, res, next) {
   postRecurso (req, 'apunte', (data) => res.send(data));
 });
 
+router.post('/postUsuario', function(req, res, next) {
+  console.log("llegue aca hppp ---------------------------------------");
+  postRecurso (req, 'usuario', (data) => res.send(data));
+});
 router.post("/usuario",function (req, res){
     var user = new Usuario();
     user.nombre = req.body.nombre;

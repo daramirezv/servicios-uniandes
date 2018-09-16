@@ -28,40 +28,13 @@ class Login extends Component {
    handleSubmit(event) {
     alert('A name was submitted: ' + this.state.username + ' with this password: ' + this.state.password);
     event.preventDefault();
-    fetch('/register', {
-  method: 'POST',
-  headers: {
-    'Accept': 'application/json',
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify({
-    username: this.state.username,
-    password: this.state.password,
-  })
-})
-    .then(res => res.json())
-    .then(json => {
-      let data = {
-        username: this.state.username,
-        password: this.state.password,
-      };
-      data.push(json);
-
-      this.setState({
-        user: data,
-      });
-      alert('Si agrego un usuario');
-    });
+    fetch('/postUsuario?usuario='+ this.state.username + "&password=" + this.state.password, {
+    method: 'POST'
+  }).then(console.log("done"));
+    console.log("done");
+    window.location.reload();
   }
-
    
-  componentDidMount()
-  {
-    fetch("/getApuntes")
-    .then((response)=>{return response.json();})
-    .then((json)=>this.setState({arreglo:json}));
-  }
-
   render() {
     return (
       <div>
@@ -77,7 +50,7 @@ class Login extends Component {
             type="password"
             value={this.state.passsword}
             onChange={this.handlePasswordInput}
-            id = "inputEmail"
+            id = "inputPassword"
             className="form-control"
             placeholder="Password" />
           <br/>
