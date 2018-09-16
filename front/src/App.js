@@ -38,25 +38,25 @@ class App extends Component {
       this.setState({ showForm: false })
     }
     toggleEstadoTutor(){
-        this.setState({estado: "tutor", carga:<Tutor/>, form: <TutoresForm/>, showForm:false})
+        this.setState({estado: "Tutor", carga:<Tutor/>, form: <TutoresForm/>, showForm:false})
     }
     toggleEstadoApuntes(){
-        this.setState({estado: "apuntes", carga:<Apuntes/>, form: <ApuntesForm/>, showForm:false})
+        this.setState({estado: "Apuntes", carga:<Apuntes/>, form: <ApuntesForm/>, showForm:false})
     }
     toggleEstadoComida(){
-        this.setState({estado: "comida", carga:<Comida/>, form: <ComidasForm/>, showForm:false})
+        this.setState({estado: "Comida", carga:<Comida/>, form: <ComidasForm/>, showForm:false})
     }
     toggleEstadoEventos(){
-        this.setState({estado: "eventos", carga:<Eventos/>, form: <EventosForm/>, showForm:false})
+        this.setState({estado: "Eventos", carga:<Eventos/>, form: <EventosForm/>, showForm:false})
     }
     toggleEstadoFormularios(){
-        this.setState({estado: "formularios", carga:<Formularios/>, form: <FormulariosForm/>, showForm:false})
+        this.setState({estado: "Formularios", carga:<Formularios/>, form: <FormulariosForm/>, showForm:false})
     }
     toggleEstadoGeneral(){
-        this.setState({estado: "general", carga:<General/>, form: <GeneralForm/>, showForm:false})
+        this.setState({estado: "General", carga:<General/>, form: <GeneralForm/>, showForm:false})
     }
     toggleEstadoProductos(){
-        this.setState({estado: "productos", carga:<Productos/>, form: <ProductosForm/>, showForm:false})
+        this.setState({estado: "Productos", carga:<Productos/>, form: <ProductosForm/>, showForm:false})
     }
 
     render() {
@@ -87,7 +87,7 @@ class App extends Component {
           </li>
         </ul>
           <Button type="button" bsStyle="primary" className="btn btn-primary" className="xd" onClick ={this.handleShow}>Post</Button>
-          <button type="button" className="btn btn-primary" onClick ={this.handleShow}>Log in</button>
+          <button type="button" className="btn btn-primary">Log in</button>
           <button type="button" className="btn btn-primary" >Registro</button>
       </div>
     </nav>
