@@ -18,10 +18,10 @@ class Tutor extends Component {
   return this.state.arreglo.map((obje,i) => 
   (
 
-  <div className = "container" key="i">
+  <div className = "container" key={i}>
     <div className="itemCard card" >
 <div className="card-body">
-  <h5 className="card-title">Nombre vendedor</h5>
+  <h5 className="card-title">Nombre</h5>
   <p className="card-text">{obje.nombre}</p>
 </div>
 <div className="card-body">

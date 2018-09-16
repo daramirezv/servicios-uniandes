@@ -9,9 +9,9 @@ import Productos from './Productos';
 import Tutor from './Tutor';
 
 class App extends Component {
-    constructor(props){
-        super(props);
-        this.state = {estado:"tutor", carga:<Tutor/>}
+    constructor(props,context){
+        super(props,context);
+        this.state = {estado:"tutor", carga:<Tutor/>, show:false};
         this.toggleEstadoTutor = this.toggleEstadoTutor.bind(this);
         this.toggleEstadoApuntes = this.toggleEstadoApuntes.bind(this);
         this.toggleEstadoComida = this.toggleEstadoComida.bind(this);
@@ -19,6 +19,15 @@ class App extends Component {
         this.toggleEstadoFormularios = this.toggleEstadoFormularios.bind(this);
         this.toggleEstadoGeneral = this.toggleEstadoGeneral.bind(this);
         this.toggleEstadoProductos = this.toggleEstadoProductos.bind(this);
+        this.handleShow = this.handleShow.bind(this);
+        this.handleClose = this.handleClose.bind(this);
+    }
+    handleClose() {
+      this.setState({ show: false });
+    }
+  
+    handleShow() {
+      this.setState({ show: true });
     }
     toggleEstadoTutor(){
         this.setState({estado: "tutor", carga:<Tutor/>})
@@ -43,6 +52,7 @@ class App extends Component {
     }
 
     render() {
+
       return (<div><nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
       <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -79,69 +89,17 @@ class App extends Component {
       </div>
     </div>
 
+<button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
     <div>{this.state.carga}</div>
 
-{/*<div className="modal fade" id="loginModalLabel" tabIndex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-  <div className="modal-dialog" role="document">
-    <div className="modal-content">
-      <div className="modal-header">
-        <h5 className="modal-title" id="loginModalLabel">Log in</h5>
-        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div className="modal-body">
-        <form>
-          <div className="form-group">
-            <label htmlFor="recipient-name" className="col-form-label">Cuenta:</label>
-            <input type="text" className="form-control" id="recipient-name"/>
-          </div>
-          <div className="form-group">
-            <label htmlFor="contra-text" className="col-form-label">Contraseña:</label>
-            <input type="text" className="form-control" id="contra-text"/>
-          </div>
-        </form>
-      </div>
-      <div className="modal-footer">
-        <button type="button" className="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="button" className="btn btn-primary">Log in</button>
-      </div>
-    </div>
-  </div>
-</div>
 
-<div className="modal fade" id="registroModalLabel" tabIndex="-1" role="dialog" aria-labelledby="registroModalLabel" aria-hidden="true">
-    <div className="modal-dialog" role="document">
-      <div className="modal-content">
-        <div className="modal-header">
-          <h5 className="modal-title" id="registroModalLabel">Registro</h5>
-          <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div className="modal-body">
-          <form>
-            <div className="form-group">
-              <label htmlFor="recipient-name" className="col-form-label">Cuenta:</label>
-              <input type="text" className="form-control" id="recipient-name"/>
-            </div>
-            <div className="form-group">
-              <label htmlFor="contra-text" className="col-form-label">Contraseña:</label>
-              <input type="text" className="form-control" id="contra-text"/>
-            </div>
-            <div className="form-group">
-                <label htmlFor="correo-text" className="col-form-label">Correo:</label>
-                <input type="text" className="form-control" id="correo-text"/>
-              </div>
-          </form>
-        </div>
-        <div className="modal-footer">
-          <button type="button" className="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-          <button type="button" className="btn btn-primary">Registro</button>
-        </div>
-      </div>
-    </div>
-    </div>*/}</div>)
+
+
+
+</div>)
     }
   }
 

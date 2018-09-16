@@ -1,27 +1,42 @@
 import React, { Component } from 'react';
 import './Card.css';
 
-const carddd = (<div className = "container"><div className="itemCard card" >
+class General extends Component {
+  constructor(props){
+    super(props);
+    this.state = {arreglo: []}
+  }
+   
+  componentDidMount()
+  {
+    fetch("/getGeneral")
+    .then((response)=>{return response.json();})
+    .then((json)=>this.setState({arreglo:json}));
+  }
+
+  render() {
+
+    return this.state.arreglo.map((obje,i) =>  ( 
+
+<div className = "container" key={i}><div className="itemCard card" >
 <div className="card-body">
-  <h5 className="card-title">Nombre vendedor</h5>
-  <p className="card-text">David Ramirez</p>
+  <h5 className="card-title">Nombre</h5>
+  <p className="card-text">{obje.nombre}}</p>
 </div>
 
 <ul className="list-group list-group-flush">
-  <li className="list-group-item">Encuesta sobre cigarrillo</li>
+  <li className="list-group-item">{obje.descripcion}</li>
 </ul>
 <div className="card-body">
-  <a href="#" className="card-link">Enviar correo</a>
+  <a href="#" className="card-link">{obje.correo}</a>
 </div>
-</div> </div>);
+</div> </div>
 
-const arreglo = [carddd, carddd,carddd,carddd,carddd];
-const listar = arreglo.map((objeto,i) =>(<div key={"objeto"+i}>{objeto}</div>));
+    ))
 
-class General extends Component {
-  render() {
-    return (<div>{listar}</div>);
   }
 }
 
 export default General;
+
+
