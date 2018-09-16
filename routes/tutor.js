@@ -1,9 +1,10 @@
 var express = require('express');
 var router = express.Router();
-
+const mongoose = require("mongoose");
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
-
+const UsuarioSchema  = require("../models/user");
+const Usuario = mongoose.model("Usuario", UsuarioSchema);
 
 
 
@@ -134,5 +135,72 @@ router.post('/postComida', function(req, res, next) {
 router.post('/postApunte', function(req, res, next) {
   postRecurso (req, 'apunte', (data) => res.send(data));
 });
+
+router.post("/usuario",function (req, res){
+    var user = new Usuario();
+    user.nombre = req.body.nombre;
+    user.usuario = req.body.usuario;
+    user.password = req.body.password;
+    user.save(function(err) {
+      if (err) {
+        // duplicate entry
+        if (err.code == 11000)
+          return res.json({ success: false, message: 'Ya existe un usuario con ese login. '});
+        else
+          return res.send(err);
+      }
+
+    });
+    return res.json({ success: true, message: "Usuario agregado" });
+
+  });
+
+
+
+   //lOG IN EN LA APLICACIÓN -----------------------------------------------------------------------------------------------------------
+  router.post("/authenticate", function(req, res) {
+
+    Usuario.findOne({
+      usuario: req.body.usuario
+    }).select("_id nombre").exec(function(err, user) {
+      if (err) throw err;
+
+      // no user with that username was found
+      if (!user) {
+        res.json({
+          success: false,
+          code: 2,
+          message: "El nombre de usuario no existe."
+        });
+      } else if (user) {
+
+        // check if password matches
+        var validPassword = user.comparePassword(req.body.password);
+        if (!validPassword) {
+          res.json({
+            success: false,
+            message: "Contraseña incorrecta"
+          });
+        } else {
+
+          // if user is found and password is right
+          // create a token
+          var token = jwt.sign({
+            _id: user.id,
+            nombre: user.nombre,
+            usuario: user.usuario,
+          }, superSecret);
+          // return the information including token as JSON
+          return res.json({
+            success: true,
+            message: "Enjoy your token!",
+            token: token
+          });
+        }
+
+      }
+
+    });
+  });
 
 module.exports = router;
