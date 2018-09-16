@@ -65,4 +65,4 @@ class Login extends Component {
   }
 };
 
-export default Apuntes;
+export default Login;
