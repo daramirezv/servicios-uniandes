@@ -37,7 +37,7 @@ class Login extends Component {
    
   render() {
     return (
-      <div>
+      <div class="container">
         <h1 class="h3 mb-3 font-weight-normal">Please sign up</h1>
         <form class="form-signin" onSubmit={this.handleSubmit}>
           <label for="inputEmail" class="sr-only">Username</label>

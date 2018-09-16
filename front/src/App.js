@@ -94,6 +94,7 @@ class App extends Component {
     <div id = "documento">
       <div className = "container">
           <h1 id = "tituloPagina">{this.state.estado}</h1>
+          <hr/>
       </div>
     </div>
     
