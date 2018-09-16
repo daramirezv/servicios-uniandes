@@ -7,6 +7,7 @@ import Formularios from './Formularios';
 import General from './General';
 import Productos from './Productos';
 import Tutor from './Tutores';
+import Login from './Login';
 import {ApuntesForm} from './Apuntes';
 import {ComidasForm} from './Comidas';
 import {EventosForm} from './Eventos';
@@ -19,7 +20,7 @@ import {Button} from 'react-bootstrap';
 class App extends Component {
     constructor(props,context){
         super(props,context);
-        this.state = {estado:"tutor", carga:<Tutor/>, form:<TutoresForm/>, showForm:false};
+        this.state = { carga:<Login/>};
         this.toggleEstadoTutor = this.toggleEstadoTutor.bind(this);
         this.toggleEstadoApuntes = this.toggleEstadoApuntes.bind(this);
         this.toggleEstadoComida = this.toggleEstadoComida.bind(this);
@@ -85,23 +86,20 @@ class App extends Component {
             <a className="nav-link" id = "tituloGeneral" href="#" onClick = {this.toggleEstadoGeneral}>General</a>
           </li>
         </ul>
-          <button type="button" className="btn btn-primary" >Log in</button>
+          <Button type="button" bsStyle="primary" className="btn btn-primary" className="xd" onClick ={this.handleShow}>Post</Button>
+          <button type="button" className="btn btn-primary" onClick ={this.handleShow}>Log in</button>
           <button type="button" className="btn btn-primary" >Registro</button>
       </div>
     </nav>
-    
     <div id = "documento">
       <div className = "container">
           <h1 id = "tituloPagina">{this.state.estado}</h1>
       </div>
     </div>
     
-    <div className = "container">
-    <Button type="button" bsStyle="primary" className="btn btn-primary" className="xd" onClick ={this.handleShow}>Post</Button>
-    </div>
-
+    
     { this.state.showForm ? this.state.form : null }
-  
+    
     <div>{this.state.carga}</div>
 
 </div>)

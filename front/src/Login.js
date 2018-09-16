@@ -23,7 +23,36 @@ class Login extends Component {
     this.setState({
       password: event.target.value
     });
-}
+  }
+
+   handleSubmit(event) {
+    alert('A name was submitted: ' + this.state.username + ' with this password: ' + this.state.password);
+    event.preventDefault();
+    fetch('/register', {
+  method: 'POST',
+  headers: {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    username: this.state.username,
+    password: this.state.password,
+  })
+})
+    .then(res => res.json())
+    .then(json => {
+      let data = {
+        username: this.state.username,
+        password: this.state.password,
+      };
+      data.push(json);
+
+      this.setState({
+        user: data,
+      });
+      alert('Si agrego un usuario');
+    });
+  }
 
    
   componentDidMount()
@@ -39,11 +68,7 @@ class Login extends Component {
         <h1 class="h3 mb-3 font-weight-normal">Please sign up</h1>
         <form class="form-signin" onSubmit={this.handleSubmit}>
           <label for="inputEmail" class="sr-only">Username</label>
-          <input
-            type="text"
-            username={this.state.username}
-            onChange={this.handleChange}
-            id = "inputEmail"
+          <input type="text" username={this.state.username} onChange={this.handleChange} id = "inputEmail"
             className="form-control"
             placeholder="Username" />
           <br/>
