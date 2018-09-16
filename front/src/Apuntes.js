@@ -44,14 +44,14 @@ export class ApuntesForm extends Component {
     this.render = this.render.bind(this);
   }
    
-  ingresar(correo1)
+  ingresar()
   {
     const nombre = document.getElementById('exampleInputNombre1').value;
     const descripcion = document.getElementById('exampleInputDescripcion1').value;
     const sitio = document.getElementById('exampleInputDireccion1').value;
     const correo = document.getElementById('exampleInputEmail1').value;
 
-    fetch("/postProducto?nombre="+nombre+"&descripcion="+descripcion+"&sitio="+sitio+"&correo="+correo,{
+    fetch("/postApunte?nombre="+nombre+"&descripcion="+descripcion+"&sitio="+sitio+"&correo="+correo,{
       method: 'POST'
     }).then(console.log("done"));
     console.log("done");
@@ -77,7 +77,7 @@ export class ApuntesForm extends Component {
       <label htmlFor="exampleInputDescripcion1">Descripcion</label>
       <input type="text" className="form-control" id="exampleInputDescripcion1" placeholder="Descripcion"/>
     </div>
-    <button type="button" className="btn btn-primary" onClick={this.ingresar("null")}>Submit</button>
+    <button type="button" className="btn btn-primary" onClick={this.ingresar}>Submit</button>
   </form></div>
     )
   }

@@ -48,11 +48,11 @@ export class FormulariosForm extends Component {
   ingresar()
   {
     const nombre = document.getElementById('exampleInputNombre1').value;
-    const descripcion = document.getElementById('exampleInputDescripcion1').value;
+    const descripcion = document.getElementById('exampleInputSitio1').value;
     const premio = document.getElementById('exampleInputPremio1').value;
     const correo = document.getElementById('exampleInputEmail1').value;
 
-    fetch("/postProducto?nombre="+nombre+"&descripcion="+descripcion+"&premio="+premio+"&correo="+correo,{
+    fetch("/postFormulario?nombre="+nombre+"&descripcion="+descripcion+"&premio="+premio+"&correo="+correo,{
       method: 'POST'
     }).then(console.log("done"));
     console.log("done");

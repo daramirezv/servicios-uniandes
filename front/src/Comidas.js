@@ -60,7 +60,7 @@ export class ComidasForm extends Component {
     const costo = document.getElementById('exampleInputCosto1').value;
     const correo = document.getElementById('exampleInputEmail1').value;
 
-    fetch("/postProducto?imagen="+imagen+"&nombre="+nombre+"&producto="+producto+"&descripcion="+descripcion+"&sitio="+sitio+"&costo="+costo+"&correo="+correo,{
+    fetch("/postComida?imagen="+imagen+"&nombre="+nombre+"&producto="+producto+"&descripcion="+descripcion+"&sitio="+sitio+"&costo="+costo+"&correo="+correo,{
       method: 'POST'
     }).then(console.log("done"));
     console.log("done");

@@ -50,7 +50,7 @@ export class GeneralForm extends Component {
     const descripcion = document.getElementById('exampleInputDescripcion1').value;
     const correo = document.getElementById('exampleInputEmail1').value;
 
-    fetch("/postProducto?nombre="+nombre+"&descripcion="+descripcion+"&correo="+correo,{
+    fetch("/postGeneral?nombre="+nombre+"&descripcion="+descripcion+"&correo="+correo,{
       method: 'POST'
     }).then(console.log("done"));
     console.log("done");

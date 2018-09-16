@@ -53,7 +53,7 @@ export class EventosForm extends Component {
     const costo = document.getElementById('exampleInputCosto1').value;
     const correo = document.getElementById('exampleInputEmail1').value;
 
-    fetch("/postProducto?nombre="+nombre+"&descripcion="+descripcion+"&costo="+costo+"&correo="+correo,{
+    fetch("/postEvento?nombre="+nombre+"&descripcion="+descripcion+"&costo="+costo+"&correo="+correo,{
       method: 'POST'
     }).then(console.log("done"));
     console.log("done");
