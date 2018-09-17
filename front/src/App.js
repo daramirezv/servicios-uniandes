@@ -63,8 +63,8 @@ class App extends Component {
     seIngreso(){
       this.setState({carga:<Login/>});
     }
-    render() {
 
+    render() {      
       return (<div><nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
       <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -90,15 +90,16 @@ class App extends Component {
             <a className="nav-link" id = "tituloGeneral" href="#" onClick = {this.toggleEstadoGeneral}>General</a>
           </li>
         </ul>
-          <a class="navbar-brand" href="#" id="nombreUs">{"Hola, " + this.props.logear}</a>
+          <a class="navbar-brand" href="#" id="nombreUs"></a>
           <Button type="button" bsStyle="primary" className="btn btn-primary" className="xd" onClick ={this.handleShow}>Post</Button>
           <button type="button" className="btn btn-primary" onClick ={this.seIngreso}>Ingresar</button>
       </div>
+
     </nav>
     <div id = "documento">
       <div className = "container">
           <h1 id = "tituloPagina">{this.state.estado}</h1>
-          <hr/>
+          <hr/>       
       </div>
     </div>
     
