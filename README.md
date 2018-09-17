@@ -47,7 +47,7 @@ Encontrará la aplicación desplegada si en su browser se dirige a http://localh
 
 # ScreenShot
 ![Screen](https://github.com/daramirezv/servicios-uniandes/blob/master/front/public/Servicios-uniandes.JPG?raw=true)
-Página del proyecto:
+Página del proyecto: https://servicios-uniandes.herokuapp.com
 # Licencia MIT
 
 El proyecto cuenta con la licencia del MIT disponible [aquí](https://github.com/daramirezv/servicios-uniandes/blob/master/LICENSE).
