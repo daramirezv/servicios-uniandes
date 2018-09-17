@@ -54,6 +54,7 @@ class Login extends Component {
       })
       .then((usuario) => {
         if (usuario.usuario === undefined) {
+          
           let err = { mensaje: usuario.error, tipo: "danger" };
           this.props.error(err);
         } else {
@@ -85,9 +86,9 @@ class Login extends Component {
         </form>
          <hr/> 
           <h1 class="h3 mb-3 font-weight-normal">¿ya tienes una cuenta? inicia sesión:</h1>
-        <form class="form-signin" onSubmit={this.manejoLogin}>
+          <form class="form-signin" onSubmit={this.manejoLogin}>
           <label for="inputEmail2" class="sr-only">Username</label>
-          <input type="text" username={this.state.username} onChange={this.manejoLogin} id = "inputEmail2"
+          <input type="text" username={this.state.username} onChange={this.handleChange} id = "inputEmail2"
             className="form-control"
             placeholder="Username" />
           <br/>
