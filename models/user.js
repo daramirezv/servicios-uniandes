@@ -1,35 +1,39 @@
-var bcrypt = require('bcrypt-nodejs');
-var mongoose = require('mongoose'); 
+"use strict";
+//esta clase maneja lo del usuario
+var bcrypt = require("bcrypt-nodejs");
+var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var UsuarioSchema = new Schema({
   nombre: String,
   usuario: {
-   type: String,
-   required: false,
-   index: { 
-    unique: true 
-          }},
-  password: { 
-    type: String, 
-    select: true }
- });
+    type: String,
+    required: false,
+    index: {
+      unique: true
+    }
+  },
+  password: {
+    type: String,
+    select: true
+  }
+});
 
- // codificar la contraseña antes de guardarla
-UsuarioSchema.pre('save', function(next) {
+// codificar la contraseña antes de guardarla
+UsuarioSchema.pre("save", function (next) {
 
   var user = this;
 
-  if (!user.isModified('password')) return next();
+  if (!user.isModified("password")) return next();
 
-  bcrypt.hash(user.password, null, null, function(err, hash) {
+  bcrypt.hash(user.password, null, null, function (err, hash) {
     if (err) return next(err);
     user.password = hash;
     next();
-    });
+  });
 });
 
-UsuarioSchema.methods.comparePassword = function(password) {
+UsuarioSchema.methods.comparePassword = function (password) {
   var user = this;
   return bcrypt.compareSync(password, user.password);
 };
