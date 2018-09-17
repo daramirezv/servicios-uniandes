@@ -32,7 +32,7 @@ Front-End:
 ```
 > npm install
 ```
-4. Verifique que exista una carpeta llamada node_modules tanto en el directorio raíz  del proyecto como en la directorio  /front .
+4. Verifique que exista una carpeta llamada **node_modules** tanto en el directorio raíz  del proyecto como en el directorio  /front .
 5. Vuelva nuevamente al directorio /front y ejecute el comando
 ```
 > npm start
