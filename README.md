@@ -28,7 +28,7 @@ Front-End:
 ```
 > npm install
 ```
-3. Navegue por consola a el directorio /frontend y corra nuevamente el comando
+3. Navegue por consola hasta el directorio /front y corra nuevamente el comando
 ```
 > npm install
 ```
