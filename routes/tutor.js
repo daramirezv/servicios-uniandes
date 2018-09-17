@@ -106,6 +106,10 @@ router.get('/getApuntes', function(req, res, next) {
   getRecursos ('apunte', (data) => res.send(data));
 });
 
+router.get('/getUsuario', function(req, res, next) {
+  getRecursos ('usuario', (data) => res.send(data));
+});
+
 //////////////////////////////////////////////////////
 
 router.post('/postTutor', function(req, res, next) {

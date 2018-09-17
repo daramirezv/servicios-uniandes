@@ -20,7 +20,7 @@ import {Button} from 'react-bootstrap';
 class App extends Component {
     constructor(props,context){
         super(props,context);
-        this.state = { carga:<Login/>};
+        this.state = { carga: ''};
         this.toggleEstadoTutor = this.toggleEstadoTutor.bind(this);
         this.toggleEstadoApuntes = this.toggleEstadoApuntes.bind(this);
         this.toggleEstadoComida = this.toggleEstadoComida.bind(this);
@@ -29,6 +29,7 @@ class App extends Component {
         this.toggleEstadoGeneral = this.toggleEstadoGeneral.bind(this);
         this.toggleEstadoProductos = this.toggleEstadoProductos.bind(this);
         this.handleShow = this.handleShow.bind(this);
+        this.seIngreso = this.seIngreso.bind(this);
     }
   
     handleShow() {
@@ -59,6 +60,9 @@ class App extends Component {
         this.setState({estado: "Productos", carga:<Productos/>, form: <ProductosForm/>, showForm:false})
     }
 
+    seIngreso(){
+      this.setState({carga:<Login/>});
+    }
     render() {
 
       return (<div><nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
@@ -87,8 +91,7 @@ class App extends Component {
           </li>
         </ul>
           <Button type="button" bsStyle="primary" className="btn btn-primary" className="xd" onClick ={this.handleShow}>Post</Button>
-          <button type="button" className="btn btn-primary">Log in</button>
-          <button type="button" className="btn btn-primary" >Registro</button>
+          <button type="button" className="btn btn-primary" onClick ={this.seIngreso}>Ingresar</button>
       </div>
     </nav>
     <div id = "documento">
