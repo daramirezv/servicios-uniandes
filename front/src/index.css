@@ -42,3 +42,14 @@ nav.navbar.fixed-top.navbar-expand-lg.navbar-light
 {
   background-image: linear-gradient(90deg, #fff8b1 0%, #ffdf00 51%, #ffff00 75%);
 }
+
+button.xd.btn.btn-primary{
+  border-color:#4b4b4b;
+  background-color: black;
+  background-image: linear-gradient(to bottom,black 0,#4b4b4b 100%);
+}
+button.btn.btn-primary{
+  border-color:#4b4b4b;
+  background-color: black;
+  background-image: linear-gradient(to bottom,black 0,#4b4b4b 100%);
+}

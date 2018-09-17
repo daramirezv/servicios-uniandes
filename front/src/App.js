@@ -90,6 +90,7 @@ class App extends Component {
             <a className="nav-link" id = "tituloGeneral" href="#" onClick = {this.toggleEstadoGeneral}>General</a>
           </li>
         </ul>
+          <a class="navbar-brand" href="#" id="nombreUs"></a>
           <Button type="button" bsStyle="primary" className="btn btn-primary" className="xd" onClick ={this.handleShow}>Post</Button>
           <button type="button" className="btn btn-primary" onClick ={this.seIngreso}>Ingresar</button>
       </div>

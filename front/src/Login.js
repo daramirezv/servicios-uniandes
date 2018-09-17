@@ -57,8 +57,10 @@ class Login extends Component {
           let err = { mensaje: usuario.error, tipo: "danger" };
           this.props.error(err);
         } else {
+          window.location.reload();
           //callback al padre para que sepa el usuariologeado
           this.props.logear(usuario);
+
         }
       })
       .catch((err) => console.log(err));
