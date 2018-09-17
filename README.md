@@ -41,6 +41,10 @@ Front-End:
 ```
 > npm start
 ```
+
+Encontrará la aplicación desplegada si en su browser se dirige a http://localhost:3000/
+
+
 # ScreenShot
 ![Screen](https://github.com/daramirezv/servicios-uniandes/blob/master/front/public/Servicios-uniandes.JPG?raw=true)
 Página del proyecto:
