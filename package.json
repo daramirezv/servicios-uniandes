@@ -19,5 +19,8 @@
     "mongodb": "^3.1.6",
     "mongoose": "^5.2.15",
     "morgan": "~1.9.0"
+  },
+  "scriptsComments": {
+    "proxy": "pueden añadir un proxy para conectar las urls del back con el front, este proxi se coloca en el package.json de react"
   }
 }
