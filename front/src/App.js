@@ -18,7 +18,7 @@ import { GeneralForm } from "./General";
 import { ProductosForm } from "./Productos";
 import { TutoresForm } from "./Tutores";
 import { Button } from "react-bootstrap";
-
+//muchos de los modulos que tienen pueden meterlos en una carpeta de esta forma queda mas organizado
 class App extends Component {
   constructor(props, context) {
     super(props, context);
